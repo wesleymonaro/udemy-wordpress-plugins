@@ -18,6 +18,14 @@ get_header(); ?>
 
 			<?php
 			/* Start the Loop */
+
+			// Modificaçao
+
+			//query_posts('post_per_page=10&order=ASC');
+			//query_posts('post_status=draft');
+			//query_posts('tag_id=2');
+			query_posts('cat=4');
+
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/post/content', get_post_format() );
